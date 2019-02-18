@@ -32,7 +32,7 @@ def get_data_batches( data_path, size):
 ###############################################################################
 if __name__ == '__main__':
 
-    # Get a batch of training data of size 20
+    # Get a batch of training data of size 50
     train_batch = get_data_batches( TRAIN_PATH, 50)
 
     # Image data ( height of 320, length of 240, image channel 3 for RGB )
@@ -52,5 +52,5 @@ if __name__ == '__main__':
     model.fit_generator( train_batch, steps_per_epoch=3,epochs=10 )
 
     # Test the model
-    test_batch = get_data_batches(TEST__PATH, 200)
+    test_batch = get_data_batches(TEST__PATH, 50)
     predictions = model.predict_generator( test_batch, steps=1, verbose=0)
