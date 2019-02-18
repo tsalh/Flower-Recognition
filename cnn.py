@@ -45,7 +45,7 @@ if __name__ == '__main__':
                  # Dense layer
                  Dense( NUM_LABELs, activation='softmax')])
     # CNN with a learning rate of .005
-    model.compile( Adam(lr=.05), loss='categorical_crossentropy',
+    model.compile( Adam(lr=.005), loss='categorical_crossentropy',
                    metrics=['accuracy'])
     # Train the model
     # WARNING: Running this function may cause an allocation exceeding memory
